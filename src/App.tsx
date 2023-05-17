@@ -16,7 +16,7 @@ function App() {
   const [status, setStatus] = useState<string>('')
   const [degree, setDegree] = useState<string>('')
   const [feels, setFeels] = useState<string>('')
-  const [iconWeather, setIconWeather] = useState<string>('')
+  const [iconWeather, setIconWeather] = useState<string>('/spinner.svg')
 
   function checkIcon(e: string) {
     const path = '/animated/'
