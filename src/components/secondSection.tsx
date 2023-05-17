@@ -26,7 +26,7 @@ const SecondSection: FC<UserProps > = ({
          * @this is static data need one call API to implemented (Credit Card required)
          * read more: https://openweathermap.org/api/one-call-3
          */}
-        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:max-w-7xl lg:px-8 pointer-events-none">
             <div className="sm:text-center">
                 <img src={iconWeather} alt="" className={`mt-[-6rem] relative left-0 m-auto ${iconWeather.includes('spinner') ? 'w-28' : 'w-96'}`} />
                 <h2 className="text-3xl mt-[-6rem] font-extrabold text-gray-900 mb-4 tracking-tight sm:text-4xl text-center">{status}</h2>
