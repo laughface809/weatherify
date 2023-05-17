@@ -28,7 +28,10 @@ const SecondSection: FC<UserProps > = ({
          */}
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="sm:text-center">
-                <img src={iconWeather} alt="" className={`mt-[-6rem] relative left-0 m-auto ${iconWeather.includes('spinner') ? 'w-28' : 'w-96'}`} />
+                {iconWeather.includes('spinner') ? 
+                    <img src={iconWeather} alt="" className={`mt-[-6rem] relative left-0 m-auto w-28`} /> : 
+                    <img src={iconWeather} alt="" className={`mt-[-6rem] relative left-0 m-auto w-96`} />
+                }
                 <h2 className="text-3xl mt-[-6rem] font-extrabold text-gray-900 mb-4 tracking-tight sm:text-4xl text-center">{status}</h2>
                 <h1 className="text-9xl font-extrabold text-gray-700 tracking-tight sm:text-8xl text-center">{degree ? Math.round(parseInt(degree)) : degree}{degree && '°C'}</h1>
                 <h1 className="text-3xl font-extrabold text-cyan-500 mt-4 tracking-tight sm:text-4xl text-center">{feels && 'Feels Like:'} {feels ? Math.round(parseInt(feels)) : feels}{feels && '°C'}</h1>
